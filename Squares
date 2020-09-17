@@ -1,0 +1,14 @@
+# Link to challenge
+# https://www.hackerrank.com/challenges/sherlock-and-squares/
+
+import math
+
+
+def squares(a, b):
+    num = math.ceil(math.sqrt(a))
+    count = 0
+    while math.pow(num, 2) <= b:
+        count += 1
+        num += 1
+
+    return count

@@ -1,0 +1,20 @@
+# Link to challenge
+# https://www.hackerrank.com/challenges/append-and-delete/problem
+
+def appendAndDelete(s, t, k):
+    movesLeft = k
+
+    while movesLeft > 0:
+        if t.find(s) == 0:
+            if len(t) - len(s) - movesLeft == 0:
+                return 'Yes'
+
+        if len(s) > 0:
+            s = s[:-1]
+        else:
+            if movesLeft == len(t):
+                return 'Yes'
+
+        movesLeft -= 1
+
+    return 'No'
