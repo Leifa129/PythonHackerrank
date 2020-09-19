@@ -1,0 +1,10 @@
+# Link to challenge
+# https://www.hackerrank.com/challenges/the-love-letter-mystery/problem
+
+def theLoveLetterMystery(s):
+    target = s[::-1]
+    count = 0
+    for i in range(int(len(s) / 2)):
+        count += abs(ord(target[i]) - ord(s[i]))
+
+    return count
